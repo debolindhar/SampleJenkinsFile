@@ -1,0 +1,9 @@
+node{
+  stage('Date & Buid'){
+    script {
+		DATE_TAG = java.time.LocalDate.now()
+		DATETIME_TAG = java.time.LocalDateTime.now()
+	}
+	sh "echo ${DATETIME_TAG}"
+  }
+}
