@@ -1,9 +1,6 @@
 node{
   stage('Date & Buid'){
-    script {
-		DATE_TAG = java.time.LocalDate.now()
-		DATETIME_TAG = java.time.LocalDateTime.now()
-	}
-	sh "echo ${DATETIME_TAG}"
+  	bat DATE = get-date (get-date).addDays(-1) -UFormat "%Y%m%d
+	bat "echo ${DATE}"
   }
 }
